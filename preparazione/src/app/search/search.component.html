@@ -1,4 +1,7 @@
 <p>
   <input type="text" #newquery>
-  <button>Search</button>
+  <button (click)="submit(newquery)">Search</button>
 </p>
+<div *ngFor ='let food of results.products'><img src="{{food.image_small_url}}" alt="immagine">
+  <p><a [routerLink] ="['/item',food.id]">{{food.product_name_fr}}</a></p>
+</div>
