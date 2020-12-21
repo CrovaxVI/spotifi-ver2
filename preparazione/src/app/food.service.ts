@@ -15,4 +15,11 @@ export class FoodService {
     let obsFood = this.http.get(url, { headers });
     return obsFood;
     }
+    getFoodId(id: string){
+      const url=`https://world.openfoodfacts.org/api/v0/product/${id}`;
+      const headers = new HttpHeaders("Content-Type");
+
+    let obsFood = this.http.get(url, { headers });
+    return obsFood;
+    }
 }
